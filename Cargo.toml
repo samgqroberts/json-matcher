@@ -1,9 +1,16 @@
 [package]
 name = "json-matcher"
 version = "0.1.0"
-authors = ["Sam Roberts <samgqroberts@gmail.com>"]
-description = "Utility library for declaratively matching JSON values"
 edition = "2021"
+description = "Utility library for declaratively matching JSON values"
+license = "MIT"   # SPDX ID(s)
+repository = "https://github.com/samgqroberts/json-matcher"
+homepage = "https://github.com/samgqroberts/json-matcher"
+documentation = "https://docs.rs/json-matcher"
+keywords = ["serde", "json", "matcher", "testing"]
+categories = ["development-tools", "development-tools::testing"]
+authors = ["Sam Roberts <samgqroberts@gmail.com>"]
+include = ["/src", "LICENSE"]
 
 [lib]
 crate-type = ["rlib"]
