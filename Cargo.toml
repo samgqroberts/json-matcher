@@ -1,0 +1,19 @@
+[package]
+name = "json-matcher"
+version = "0.1.0"
+authors = ["Sam Roberts <samgqroberts@gmail.com>"]
+description = "Utility library for declaratively matching JSON values"
+edition = "2021"
+
+[lib]
+crate-type = ["rlib"]
+name = "json_matcher"
+
+[dependencies]
+serde_json = { version = "1.0.145", features = ["preserve_order"] }
+chrono = { version = "0.4.42", optional = true }
+chrono-tz = { version = "0.10.4", optional = true }
+
+[features]
+default = ["datetime"]
+datetime = ["dep:chrono", "dep:chrono-tz"]
