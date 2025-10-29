@@ -12,10 +12,6 @@ categories = ["development-tools", "development-tools::testing"]
 authors = ["Sam Roberts <samgqroberts@gmail.com>"]
 include = ["/src", "LICENSE"]
 
-[lib]
-crate-type = ["rlib"]
-name = "json_matcher"
-
 [dependencies]
 serde_json = { version = "1.0.145", features = ["preserve_order"] }
 chrono = { version = "0.4.42", optional = true }
@@ -24,3 +20,7 @@ chrono-tz = { version = "0.10.4", optional = true }
 [features]
 default = ["datetime"]
 datetime = ["dep:chrono", "dep:chrono-tz"]
+
+[package.metadata.docs.rs]
+all-features = true
+rustdoc-args = ["--cfg", "docsrs"]
